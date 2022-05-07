@@ -9,7 +9,8 @@ RUN apk add curl \
     fish
 
 # Add oh-my-fish
-RUN curl -L https://get.oh-my.fish | fish
+RUN curl -L https://get.oh-my.fish > install &&\
+    fish install --noninteractive
 
 # Add plugins
 RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.45.2
