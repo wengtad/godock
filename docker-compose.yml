@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  # Expose port 8080 for Go app
+  go:
+    image: wengtad/godock:latest
+    ports:
+      - 8080:8080
+
+  # The username/password is root/root
+  # --- For PostgreSQL ---
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+
+  # --- For MariaDB ---
+  # db:
+  #   image: mariadb
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+
+  # Expore port 8081 for Adminer
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
