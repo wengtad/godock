@@ -33,7 +33,7 @@ jobs:
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
         id: meta
-        users: docker/metadata-action@v4
+        uses: docker/metadata-action@v4
         with:
           images: |
             wengtad/godock
