@@ -6,6 +6,8 @@ services:
     image: wengtad/godock:latest
     ports:
       - 8080:8080
+    volumes:
+      - ./data/projects:/root/projects
 
   # The username/password is root/root
   # --- For PostgreSQL ---
@@ -15,6 +17,8 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
+    volumes:
+      - ./data/db/postgres:/var/lib/postgresql/data
 
   # --- For MariaDB ---
   # db:
@@ -22,6 +26,8 @@ services:
   #   restart: always
   #   environment:
   #     MYSQL_ROOT_PASSWORD: root
+  #   volumes:
+  #     - ./data/db/mariadb:/var/lib/mysql
 
   # Expore port 8081 for Adminer
   adminer:
