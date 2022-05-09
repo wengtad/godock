@@ -8,6 +8,7 @@ Setup Go development environment using 🐳 Docker. You may use it without insta
 - Docker
 - Fish & Oh-My-Fish
 - Git
+- GitFlow
 - Go
 
 ## Prerequisite
