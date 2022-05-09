@@ -3,6 +3,7 @@ FROM golang:alpine
 # Add required packages
 RUN apk add curl \
     git \
+    git-flow \
     gcc \
     libc-dev \
     docker \
