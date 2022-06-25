@@ -35,3 +35,14 @@ services:
     restart: always
     ports:
       - 8081:8080
+
+  cache:
+    image: redis:7-alpine
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass mySecurePa33w0rd
+    volumes:
+      - cache:/data
+
+volumes:
+  cache:
+    driver: local
