@@ -14,7 +14,7 @@ RUN curl -L https://get.oh-my.fish > install &&\
     fish install --noninteractive
 
 # Add plugins
-RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.55.2
+RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
 
 EXPOSE 8080
 
